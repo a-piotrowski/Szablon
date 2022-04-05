@@ -1,16 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: #af2121;
+  background-color: rgb(175, 33, 33);
   background-image: url("../images/obraz_baner.jpg");
+  background-size: cover;
 }
-
 body > header {
-  border: 2px dashed #af2121;
+  border: 2px dashed rgb(175, 33, 33);
 }
-
 body > header nav {
   border: 2px dashed blue;
 }
-
 body > header .hamburger {
   border: 2px dashed green;
-}
+}/*# sourceMappingURL=style.css.map */

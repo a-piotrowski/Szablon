@@ -1,9 +1,12 @@
 $bgColor:rgb(175, 33, 33);
-
+*{box-sizing: border-box;}
 
 body{
     background-color: $bgColor;
     background-image: url("../images/obraz_baner.jpg");
+
+background-size: cover;
+
 >header{
     border: 2px dashed $bgColor;
 
