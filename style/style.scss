@@ -1,0 +1,21 @@
+$bgColor:rgb(175, 33, 33);
+
+
+body{
+    background-color: $bgColor;
+>header{
+    border: 2px dashed $bgColor;
+
+nav{
+    border: 2px dashed blue;
+
+}
+.hamburger{
+    border: 2px dashed green;
+}
+}
+
+}
+
+
+
