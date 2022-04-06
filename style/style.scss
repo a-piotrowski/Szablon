@@ -11,20 +11,47 @@ body{
   min-height: 100vh;
   color:#fff;
   >header{
-    border:2px dashed red;
+    // border:2px dashed red;
     display:flex;
     justify-content: space-between;
+    padding: 1em 2em;
+
+    // Bezpośrednie wszystkie dzieci headera
+    > * {
+      // border: 5px solid red;
+      display:flex;
+      align-items: center;
+    }
+
+    .pageLogo{
+      // border: 2px dashed pink;
+      a{text-decoration: none;
+        color: inherit;
+        display: flex; //żeby wszystko było obok siebvie na sztywno
+
+
+        b{
+           font-size: 30px; 
+        }
+
+      }
+       
+    }
+    
 
     nav{
       // border:2px dashed $bgColor;
       position:relative;
       min-height: $buttonSize;
+
+
+
       #toggler{display:none;}
 
       // domyślne wyświetlanie
 
       label{
-        border:2px dashed yellow;
+        // border:2px dashed yellow;
         position:absolute;
         width:$buttonSize;
         height:$buttonSize;
@@ -36,6 +63,7 @@ body{
         div{
           // border:2px solid #000;
           background-color: rgb(255, 255, 255);
+          border-radius: 5px;
           position:absolute;
           width:80%;
           left:10%;
@@ -57,7 +85,26 @@ body{
       }
       ul{
         display:none;
-        border:2px dashed blue;
+       
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 0;
+        list-style: none;
+        border-radius: 5px;
+        
+
+          li{
+            padding: .5em .7em;
+            display: flex;
+               justify-content: center;
+               align-items: center;
+             a{
+               text-decoration: none;
+               color: #fff;
+               text-align: center;
+               
+             }
+          }
+
         // display:flex;
         flex-direction: column;
         position: absolute;
@@ -104,14 +151,17 @@ body{
     // }
 
 
-
+// Wyświetlnie na dużych ekranach
     @media (min-width:768px){
+      label{display: none;}
       nav{
         ul{
           display:flex;
+          flex-direction: row;
+          position:static;
         }
       }
     }
 
   }
-}
+ }
