@@ -44,6 +44,7 @@ body > header nav label div {
   width: 80%;
   left: 10%;
   height: 10%;
+  transition: .5s;
 }
 
 body > header nav label div:nth-child(1) {
@@ -55,7 +56,7 @@ body > header nav label div:nth-child(2) {
 }
 
 body > header nav label div:nth-child(3) {
-  top: 80%;
+  top: 72.5%;
 }
 
 body > header nav ul {
@@ -70,6 +71,26 @@ body > header nav ul {
 
 body > header nav #toggler:checked ~ ul {
   display: flex;
+}
+
+body > header nav #toggler:checked ~ label {
+  border-color: blue;
+}
+
+body > header nav #toggler:checked ~ label div:nth-child(1) {
+  background-color: white;
+  transform: rotate(45deg);
+  top: 45%;
+}
+
+body > header nav #toggler:checked ~ label div:nth-child(2) {
+  opacity: 0;
+}
+
+body > header nav #toggler:checked ~ label div:nth-child(3) {
+  background-color: white;
+  transform: rotate(-45deg);
+  top: 45%;
 }
 
 @media (min-width: 768px) {
