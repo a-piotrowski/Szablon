@@ -29,6 +29,8 @@ body{
         color: inherit;
         display: flex; //żeby wszystko było obok siebvie na sztywno
 
+        
+
 
         b{
            font-size: 30px; 
@@ -101,6 +103,13 @@ body{
                text-decoration: none;
                color: #fff;
                text-align: center;
+
+               &:hover{
+                color:rgb(70, 12, 67);
+                font-size: 1.5em;
+                transition: all 1s;
+                
+              }
                
              }
           }
