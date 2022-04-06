@@ -25,6 +25,7 @@ body > header .pageLogo a {
   text-decoration: none;
   color: inherit;
   display: flex;
+  text-shadow: 0 1px 10px #fff;
 }
 body > header .pageLogo a b {
   font-size: 30px;
@@ -83,6 +84,7 @@ body > header nav ul li {
 body > header nav ul li a {
   text-decoration: none;
   color: #fff;
+  text-shadow: 0 1px 10px #fff;
   text-align: center;
 }
 body > header nav ul li a:hover {

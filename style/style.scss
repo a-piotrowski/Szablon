@@ -28,6 +28,7 @@ body{
       a{text-decoration: none;
         color: inherit;
         display: flex; //żeby wszystko było obok siebvie na sztywno
+        text-shadow: 0 1px 10px #fff;
 
         
 
@@ -102,6 +103,7 @@ body{
              a{
                text-decoration: none;
                color: #fff;
+               text-shadow: 0 1px 10px #fff;
                text-align: center;
 
                &:hover{
