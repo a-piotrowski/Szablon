@@ -122,7 +122,8 @@ body{
          div{
            &:nth-child(1){
 
-              background-color: rgb(255, 255, 255);
+              background-color: rgb(70, 12, 67);
+              box-shadow: 0 1px 10px #fff;
               transform: rotate(45deg);
               top:45%; //100%-połowa wysokości kreski
 
@@ -133,7 +134,8 @@ body{
             }
             &:nth-child(3){
 
-              background-color: rgb(255, 255, 255);
+              background-color: rgb(70, 12, 67);
+              box-shadow: 0 1px 10px #fff;
               transform: rotate(-45deg);
               top:45%; //100%-połowa wysokości kreski
 
