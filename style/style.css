@@ -89,7 +89,6 @@ body > header nav ul li a {
 }
 body > header nav ul li a:hover {
   color: rgb(70, 12, 67);
-  font-size: 1.5em;
   transition: all 1s;
 }
 body > header nav #toggler:checked ~ ul {
