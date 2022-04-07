@@ -122,21 +122,58 @@ body > header nav #toggler:checked ~ label div:nth-child(3) {
     position: static;
   }
 }
-
-main {
-  border: 5px dashed red;
+body main {
+  margin-top: 10vh;
+  padding: 0 1em;
 }
-main .wrapper {
+body main .wrapper > header {
+  flex: 1;
+}
+body main .wrapper > header h1 {
+  margin-bottom: 0;
+}
+body main .wrapper > header h2 {
+  margin-top: 0;
+}
+body main .wrapper > header button {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 1.5em;
+  min-height: 1.5 em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10vh;
+}
+body main .wrapper > article {
+  flex: 1;
   display: flex;
+  align-items: flex-start;
 }
-main .wrapper > header {
-  border: 5px dashed;
-  flex: 1;
+body main .wrapper > article .playButton {
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 1.5em;
+  min-height: 1.5 em;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
 }
-main article {
-  flex: 1;
+body main .wrapper > article .playButton span {
+  position: absolute;
+  top: 0;
+  left: 0.245em;
+  font-size: 2.5em;
 }
-main article header .container {
-  border: 1px dashed red;
+body main .wrapper > article header .container {
+  padding-left: 1em;
   overflow-y: scroll;
+  max-height: 45vh;
+}
+@media (min-width: 768px) {
+  body main .wrapper {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */
