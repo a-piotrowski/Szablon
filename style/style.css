@@ -126,6 +126,9 @@ body main {
   margin-top: 10vh;
   padding: 0 1em;
 }
+body main .about {
+  width: 40%;
+}
 body main .wrapper > header {
   flex: 1;
 }
@@ -136,7 +139,7 @@ body main .wrapper > header h2 {
   margin-top: 0;
 }
 body main .wrapper > header button {
-  background-color: transparent;
+  background-color: red;
   border: 2px solid #fff;
   border-radius: 1.5em;
   min-height: 1.5 em;
@@ -152,7 +155,7 @@ body main .wrapper > article {
   align-items: flex-start;
 }
 body main .wrapper > article .playButton {
-  background-color: transparent;
+  background-color: blue;
   border: 2px solid #fff;
   border-radius: 1.5em;
   min-height: 1.5 em;

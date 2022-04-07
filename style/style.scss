@@ -2,8 +2,8 @@ $bgColor:#b37676;
 $buttonSize: 48px;
 
 // Tutaj jest tylko szablon i żeby zadziałał musze go wywołac </div>
-@mixin borderButton($padding){
-background-color: transparent;
+@mixin borderButton($padding, $bg){
+background-color: $bg;
 border: 2px solid #fff;
 border-radius: 1.5em;
 min-height: 1.5 em;
@@ -201,6 +201,12 @@ body{
     margin-top:10vh;
     // border:5px dashed red;
     padding:0 1em;
+
+
+    .about{
+      width: 40%;
+
+    }
     .wrapper{
       // border:5px dashed yellow;
       > header{
@@ -212,7 +218,7 @@ body{
           margin-top:0;
         }
         button{
-          @include borderButton(.5em 2.5em);
+          @include borderButton(.5em 2.5em, red);
           margin-bottom:10vh;
         }
       }
@@ -223,7 +229,7 @@ body{
 
 
         .playButton{
-          @include borderButton(1.5em);
+          @include borderButton(1.5em, blue);
           border-radius: 50%;
           position:relative;
           span{
@@ -244,6 +250,8 @@ body{
 
       }
 
+      
+
 
       // URZĄDZENIA SZERSZE NIŻ 768px
       @media(min-width:768px){
@@ -251,6 +259,9 @@ body{
 
 
       }
+
+
+     
     }
   }
 
