@@ -126,9 +126,6 @@ body main {
   margin-top: 10vh;
   padding: 0 1em;
 }
-body main .about {
-  width: 40%;
-}
 body main .wrapper > header {
   flex: 1;
 }
@@ -178,7 +175,33 @@ body main .wrapper > article header .container {
   max-height: 45vh;
 }
 @media (min-width: 768px) {
-  body main .wrapper {
+  body main {
+    margin-left: 15vw;
+  }
+  body .wrapper {
     display: flex;
+  }
+  body .about {
+    width: 40%;
+  }
+}
+body footer .social {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
+}
+
+@media (min-width: 768px) {
+  footer {
+    border: 2px dashed red;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  footer .social {
+    flex-direction: column;
+  }
+  footer .social div {
+    margin: 0.8em;
   }
 }/*# sourceMappingURL=style.css.map */
