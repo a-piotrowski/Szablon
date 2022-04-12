@@ -1,4 +1,19 @@
 @charset "UTF-8";
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,32 +26,44 @@ body {
   margin: 0;
   min-height: 100vh;
   color: #fff;
+  line-height: 1.8em;
+  font-family: 'Montserrat';
 }
+
 body > header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 2em;
+  padding: clamp(0.5em, 5vw, 5em);
 }
+
 body > header > * {
   display: flex;
   align-items: center;
 }
+
 body > header .pageLogo a {
   text-decoration: none;
   color: inherit;
   display: flex;
   text-shadow: 0 1px 10px #fff;
+  align-items: center;
 }
+
 body > header .pageLogo a b {
-  font-size: 30px;
+  font-size: clamp(1.5em, 2vw, 2.5em);
+  font-family: 'Philosopher';
+  padding-left: .3em;
 }
+
 body > header nav {
   position: relative;
   min-height: 48px;
 }
+
 body > header nav #toggler {
   display: none;
 }
+
 body > header nav label {
   position: absolute;
   width: 48px;
@@ -45,27 +72,33 @@ body > header nav label {
   top: 0;
   cursor: pointer;
 }
+
 body > header nav label div {
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border-radius: 5px;
   position: absolute;
   width: 80%;
   left: 10%;
   height: 10%;
-  transition: 0.5s;
+  transition: .5s;
 }
+
 body > header nav label div:nth-child(1) {
   top: 17.5%;
 }
+
 body > header nav label div:nth-child(2) {
   top: 45%;
 }
+
 body > header nav label div:nth-child(3) {
   top: 72.5%;
 }
+
 body > header nav ul {
   display: none;
-  background-color: rgba(255, 255, 255, 0.2);
+  font-family: 'lato';
+  background-color: rgba(65, 63, 65, 0.2);
   padding: 0;
   list-style: none;
   border-radius: 5px;
@@ -75,66 +108,86 @@ body > header nav ul {
   top: 48px;
   margin: 0;
 }
+
 body > header nav ul li {
-  padding: 0.5em 0.7em;
+  padding: .5em .7em;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 body > header nav ul li a {
   text-decoration: none;
   color: #fff;
   text-shadow: 0 1px 10px #fff;
   text-align: center;
 }
+
 body > header nav ul li a:hover {
-  color: rgb(70, 12, 67);
+  color: #460c43;
   transition: all 1s;
 }
+
 body > header nav #toggler:checked ~ ul {
   display: flex;
 }
+
 body > header nav #toggler:checked ~ label {
   border-color: blue;
 }
+
 body > header nav #toggler:checked ~ label div:nth-child(1) {
-  background-color: rgb(70, 12, 67);
+  background-color: #460c43;
   box-shadow: 0 1px 10px #fff;
   transform: rotate(45deg);
   top: 45%;
 }
+
 body > header nav #toggler:checked ~ label div:nth-child(2) {
   opacity: 0;
 }
+
 body > header nav #toggler:checked ~ label div:nth-child(3) {
-  background-color: rgb(70, 12, 67);
+  background-color: #460c43;
   box-shadow: 0 1px 10px #fff;
   transform: rotate(-45deg);
   top: 45%;
 }
-@media (min-width: 768px) {
+
+@media (min-width: 1200px) {
   body > header label {
     display: none;
   }
   body > header nav ul {
+    font-size: 1.5em;
+    padding: .6em 3em;
     display: flex;
     flex-direction: row;
     position: static;
   }
 }
+
 body main {
   margin-top: 10vh;
   padding: 0 1em;
 }
+
 body main .wrapper > header {
   flex: 1;
+  font-family: 'Lemon';
+  line-height: clamp(1.8em, 4vw, 4em);
 }
+
 body main .wrapper > header h1 {
   margin-bottom: 0;
+  font-size: clamp(3em, 4vw, 4em);
 }
+
 body main .wrapper > header h2 {
   margin-top: 0;
+  font-size: clamp(2em, 3vw, 2.5em);
 }
+
 body main .wrapper > header button {
   background-color: red;
   border: 2px solid #fff;
@@ -145,12 +198,15 @@ body main .wrapper > header button {
   display: inline-block;
   padding: 0.5em 2.5em;
   margin-bottom: 10vh;
+  font-size: clamp(1em, 2vw, 1.5em);
 }
+
 body main .wrapper > article {
   flex: 1;
   display: flex;
   align-items: flex-start;
 }
+
 body main .wrapper > article .playButton {
   background-color: blue;
   border: 2px solid #fff;
@@ -163,17 +219,25 @@ body main .wrapper > article .playButton {
   border-radius: 50%;
   position: relative;
 }
+
 body main .wrapper > article .playButton span {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
-  left: 0.245em;
+  left: 0;
   font-size: 2.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 body main .wrapper > article header .container {
   padding-left: 1em;
   overflow-y: scroll;
-  max-height: 45vh;
+  max-height: 35vh;
 }
+
 @media (min-width: 768px) {
   body main {
     margin-left: 15vw;
@@ -181,10 +245,21 @@ body main .wrapper > article header .container {
   body .wrapper {
     display: flex;
   }
+  body .wrapper > article {
+    margin-right: 2em;
+  }
+  body .wrapper > article header .container {
+    padding-right: 30%;
+  }
   body .about {
     width: 40%;
   }
+  body .about {
+    font-size: clamp(1em, 2vw, 1.5em);
+    padding-left: 1px;
+  }
 }
+
 body footer .social {
   display: flex;
   justify-content: space-evenly;
@@ -204,4 +279,4 @@ body footer .social {
   footer .social div {
     margin: 0.8em;
   }
-}/*# sourceMappingURL=style.css.map */
+}
